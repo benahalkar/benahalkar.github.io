@@ -4,8 +4,8 @@ function random_rgb(){
     return rgb;
 }
 
-setInterval(
-    function(){
-        document.body.style.background = random_rgb()
-    },1000
-);
+// setInterval(
+//     function(){
+//         document.body.style.background = random_rgb()
+//     },1000
+// );
