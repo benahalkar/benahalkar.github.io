@@ -1,0 +1,22 @@
+body{
+    padding:0px;
+    margin:0px;
+    background-color: rgb(240, 255, 255);
+}
+
+div.header{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    height: 20%;
+    background-image: url("../images/intro_background.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1.header{
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 250%;
+    color: rgb(255, 255, 255);
+}
