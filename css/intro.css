@@ -16,7 +16,24 @@ div.header{
 }
 
 h1.header{
-    font-family: 'Berkshire Swash', cursive;
+    font-family: 'Encode Sans', sans-serif;
+    font-weight: 800;
     font-size: 250%;
     color: rgb(255, 255, 255);
+}
+
+.text{
+    font-family: 'Hind Madurai', sans-serif;
+    font-weight: 500;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+h1.text{
+    font-size: 300%;
+}
+
+h2.text{
+    font-size: 200%;
+    margin: 0;
 }
