@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(45, 45, 45);
+    background-color: rgb(20, 20, 20);
 }
 
 h4.footer{
@@ -9,7 +9,7 @@ h4.footer{
 }
 a.web_link{
     text-decoration: none;
-    color: rgb( 255, 255, 255);
+    color: rgb( 64, 192, 255);
 }
 
 div.profile{
@@ -127,7 +127,7 @@ a.header_op_active{
     font-weight: 700;
 }
 a.header_op:hover{
-    color: rgb( 0, 255, 0)
+    color: rgb( 64, 192, 255);
 }
 
 @media only screen and (max-width:800px) {
