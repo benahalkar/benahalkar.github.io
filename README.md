@@ -1,2 +1,2 @@
-# benahalkar.github.io
-website to host my domain
+Font provided by the <a class="external_link" href="https://rsms.me/inter/" target="_blank">Inter typeface family</a>.<br>
+                Icons provided by <a class="external_link" href="https://icons8.com/icons" target="_blank">Icons8</a>

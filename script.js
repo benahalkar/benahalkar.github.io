@@ -1,5 +1,5 @@
 const username = "benahalkar";
-const blacklisted_repos = ["info", username];
+const blacklisted_repos = ["info", username, `${username}.github.io`];
 const resume_path = "docs/Hash_Benahalkar.pdf";
 
 const project_counts = 5;
@@ -16,12 +16,64 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs
 //     circle.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
 // });
 
-const getRepositories = async (username) => {
-    const response = await fetch(`https://api.github.com/users/${username}/repos`);
-    const data = await response.json();
-    return data;
+function extractAboutSection(readmeContent) {
+    const parts = readmeContent.split('<div id="about">');
+
+    if (parts.length > 1) {
+        const aboutText = parts[1].split('</div>')[0].trim();
+        return aboutText;
+    } else {
+        return 'About section not found in README.';
+    }
+}
+
+const getReadme = async (username) => {
+    try {
+        const response = await fetch(`https://raw.githubusercontent.com/${username}/${username}/main/README.md`);
+        if (!response.ok) {
+            throw new Error('Failed to fetch repositories');
+        }
+        const data = await response.text();
+        const aboutSection = extractAboutSection(data);
+
+        return aboutSection;
+    } catch (error) {
+        console.error('Error fetching repositories:', error);
+        throw error; // Rethrow the error to handle it outside this function if needed
+    }
 };
 
+const populateAboutSection = async () => {
+    getReadme(username)
+        .then(readme => {
+            const aboutLines = document.getElementById('aboutlines');
+            if (aboutLines) {
+                // Replace Lorem Ipsum text with your desired content
+                aboutLines.innerHTML = readme;
+            }
+        });
+};
+
+
+// const getRepositories = async (username) => {
+//     const response = await fetch(`https://api.github.com/users/${username}/repos`);
+//     const data = await response.json();
+//     return data;
+// };
+
+const getRepositories = async (username) => {
+    try {
+        const response = await fetch(`https://api.github.com/users/${username}/repos`);
+        if (!response.ok) {
+            throw new Error('Failed to fetch repositories');
+        }
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error fetching repositories:', error);
+        throw error; // Rethrow the error to handle it outside this function if needed
+    }
+};
 
 const populateProjectsSection = async () => {
     try {
@@ -45,8 +97,8 @@ const populateProjectsSection = async () => {
             
             repoElement.innerHTML = `
             <a href="${repo.html_url} class="single_project_list" target="_blank">
-            <h4 id="project_title">${repo.name}</h4>
-            <p id="project_description">${repo.description}</p>
+                <h4 id="project_title">${repo.name}</h4>
+                <p id="project_description">${repo.description}</p>
             </a>
             `;
             projectsSection.appendChild(repoElement);
@@ -125,6 +177,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     populateProjectsSection();
 
+    populateAboutSection();
+
     // // Call the parsePDF function with the URL of your PDF file
     // const pdfUrl = 'docs/Harsh_Benahalkar.pdf';
     // readPDFFile(pdfUrl)
@@ -151,10 +205,9 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (targetSection) {
                 targetSection.scrollIntoView({ behavior: 'smooth' });
-                console.log("done");
             }
             else {
-                console.log("not");
+                // do nothing
             }
         });
     });
