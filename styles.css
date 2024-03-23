@@ -1,0 +1,223 @@
+@font-face {
+    font-family: 'Inter_Thin';
+    src: url('fonts/extras/ttf/Inter-Thin.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter_Regular';
+    src: url('fonts/extras/ttf/Inter-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter_Bold';
+    src: url('fonts/extras/ttf/Inter-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter_ExtraBold';
+    src: url('fonts/extras/ttf/Inter-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter_SemiBold';
+    src: url('fonts/extras/ttf/Inter-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter_Italic';
+    src: url('fonts/extras/ttf/Inter-Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter_Light';
+    src: url('fonts/extras/ttf/Inter-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter_Medium';
+    src: url('fonts/extras/ttf/Inter-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter_ThinItalic';
+    src: url('fonts/extras/ttf/Inter-ThinItalic.ttf') format('truetype');
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #2e2236;
+}
+
+p {
+    font-family: 'Inter_Light', sans-serif; 
+    font-size: 18px;
+    color: #dddddd; 
+    text-decoration: none;
+    font-weight: normal;
+    font-style: normal;
+    /* letter-spacing: 1px; */
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+}
+
+#circle {
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Allows the mouse cursor to pass through the circle */
+    transition: all 0.1s ease; /* Smooth transition effect */
+}
+
+.left_section, .right_section {
+    width: 50%;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.left_section {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.right_section {
+    margin-left: 50%; 
+
+}
+
+.external_link {
+    font-family: 'Inter_Bold', sans-serif; 
+    font-size: 20px;
+    color: #ffffff; 
+    text-decoration: none;
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* left section skeleton */
+
+img {
+    height: 50px;
+    width: auto;
+    fill: #ffffff;
+
+}
+
+.names, .tabs, .contact{
+    width: calc(100% - 250px);
+    margin: 0;
+    padding-left: 200px;
+    padding-right: 50px;
+}
+
+.names {
+    /* height: 40vh; */
+    padding-top: 100px;
+}
+
+.names h1 {
+    font-family: 'Inter_ExtraBold', sans-serif; 
+    font-size: 45px;
+    color: #ffffff; 
+    text-decoration: none;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.names h2 {
+    font-family: 'Inter_Regular', sans-serif; 
+    font-size: 22px;
+    color: #ffffff; 
+    text-decoration: none;
+    font-weight: normal;
+    font-style: normal;
+    
+}
+
+.namesline_name, .namesline_current, .namesline_about{
+    display: inline-block; 
+    text-align: left; 
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.tabs {
+    /* height: 20vh; */
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tab-link {
+    margin: 0;
+    display: inline-block;
+    white-space: nowrap;
+    padding-top: 5px;
+
+    font-family: 'Inter_Bold', sans-serif; 
+    font-size: 18px;
+    color: #ffffff; 
+    text-decoration: none;
+    font-weight: normal;
+    font-style: normal;
+
+    /* transition: font-family 3s */
+}
+
+.tab-link:hover{
+    font-family: 'Inter_Bold', sans-serif; 
+    color: #ffff00; 
+}
+
+.contact {
+    padding-top: 50px;
+    /* height: 20vh; */
+    margin: 0;
+}
+
+.contact img{
+    padding-right: 10px;
+}
+
+/* right section skeleton */
+
+.tab-content {
+    width: 100%;
+    margin: 0;
+    padding-top: 100px;
+}
+
+.aboutlines {
+    padding-right: 100px;
+}
+
+#projects .single_project {
+    padding-bottom: 30px;
+}
+
+#project_title {
+    margin: 0;
+
+    font-family: 'Inter_Bold', sans-serif; 
+    font-size: 18px;
+    color: #ffffff; 
+    text-decoration: none;
+    font-weight: normal;
+    font-style: normal;
+}
+
+#project_description {
+    margin: 0;
+}
