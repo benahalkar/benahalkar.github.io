@@ -6,15 +6,15 @@ const project_counts = 5;
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js';
 
-// document.documentElement.style.cursor = 'none';
+document.documentElement.style.cursor = 'none';
 
-// document.addEventListener('mousemove', function(event) {
-//     const circle = document.getElementById('circle');
-//     const mouseX = event.clientX;
-//     const mouseY = event.clientY;
+document.addEventListener('mousemove', function(event) {
+    const circle = document.getElementById('circle');
+    const mouseX = event.clientX;
+    const mouseY = event.clientY;
     
-//     circle.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
-// });
+    circle.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+});
 
 function extractAboutSection(readmeContent) {
     const parts = readmeContent.split('<div id="about">');
@@ -213,12 +213,17 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (targetSection) {
                 targetSection.scrollIntoView({ behavior: 'smooth' });
+
+                tabLinks.forEach(function(link){
+                    link.style.color = "#ffffff";
+                })
+
+                this.style.color = "#ffff00";
             }
             else {
                 // do nothing
             }
         });
     });
-
 
 });

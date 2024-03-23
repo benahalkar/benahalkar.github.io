@@ -52,6 +52,10 @@ body, html {
     background-color: #2e2236;
 }
 
+body {
+    overflow: hidden;
+}
+
 p {
     font-family: 'Inter_Light', sans-serif; 
     font-size: 18px;
@@ -65,6 +69,7 @@ p {
 
 a {
     text-decoration: none;
+    cursor: pointer !important;
 }
 
 #circle {
@@ -75,8 +80,8 @@ a {
     position: absolute;
     top: 0;
     left: 0;
-    pointer-events: none; /* Allows the mouse cursor to pass through the circle */
-    transition: all 0.1s ease; /* Smooth transition effect */
+    pointer-events: none;
+    /* transition: all 0.01s ease; */
 }
 
 .left_section, .right_section {
@@ -107,7 +112,7 @@ a {
 
 /* left section skeleton */
 
-img {
+.contact_icons {
     height: 50px;
     width: auto;
     fill: #ffffff;
@@ -124,6 +129,8 @@ img {
 .names {
     /* height: 40vh; */
     padding-top: 100px;
+    display: flex;
+    flex-direction: column;
 }
 
 .names h1 {
@@ -178,7 +185,7 @@ img {
 
 .tab-link:hover{
     font-family: 'Inter_Bold', sans-serif; 
-    color: #ffff00; 
+    color: #ffff00 !important; 
 }
 
 .contact {
@@ -232,4 +239,11 @@ img {
 
 #project_description {
     margin: 0;
+}
+
+.activity_images {
+    height: 150px;
+    width: auto;
+    padding-right: 20px;
+
 }
