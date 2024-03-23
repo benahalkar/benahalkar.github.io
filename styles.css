@@ -204,7 +204,19 @@ img {
 }
 
 #projects .single_project {
-    padding-bottom: 30px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 15px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-right: 50px;
+    margin-left: 5px;
+}
+
+.single_project:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
 }
 
 #project_title {

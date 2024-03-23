@@ -94,9 +94,9 @@ const populateProjectsSection = async () => {
             if (repo.description == null) {
                 repo.description = repo.name;
             }
-            
+
             repoElement.innerHTML = `
-            <a href="${repo.html_url} class="single_project_list" target="_blank">
+            <a href="${repo.html_url}" class="single_project_list" target="_blank">
                 <h4 id="project_title">${repo.name}</h4>
                 <p id="project_description">${repo.description}</p>
             </a>
@@ -109,6 +109,14 @@ const populateProjectsSection = async () => {
                 break;
             }
         }
+        
+        const pElement = document.createElement('p');
+        pElement.className = "aboutproject"; 
+        pElement.innerHTML = `
+            You can find all my other <a class="external_link" target="_blank" href="https://github.com/${username}?tab=repositories">projects</a> here.
+        `;
+        projectsSection.appendChild(pElement);
+        
     } catch (error) {
         console.error('Error fetching repositories:', error);
     }
