@@ -91,6 +91,8 @@ const populateProjectsSection = async () => {
             const repoElement = document.createElement('div');
             repoElement.className = "single_project"; 
 
+            repo.name = repo.name.replace(/-/g, ' ').replace(/_/g, ' ');
+
             if (repo.description == null) {
                 repo.description = repo.name;
             }
