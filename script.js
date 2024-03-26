@@ -1,6 +1,6 @@
 const username = "benahalkar";
 const blacklisted_repos = ["info", username, `${username}.github.io`];
-const resume_path = "docs/Hash_Benahalkar.pdf";
+const resume_path = "https://drive.google.com/file/d/1uZ4fIGaE3fATaUl6_3ez_4CShxOOZhzQ/view?usp=drive_link";
 
 const project_counts = 5;
 
@@ -20,8 +20,9 @@ function extractAboutSection(readmeContent) {
     const parts = readmeContent.split('<div id="about">');
 
     if (parts.length > 1) {
-        const aboutText = parts[1].split('</div>')[0].trim();
-        return aboutText;
+        let aboutText = parts[1].split('</div>')[0].trim();
+        aboutText = aboutText.split("<br>").join("<br><br>");
+        return aboutText;   
     } else {
         return 'About section not found in README.';
     }
@@ -39,7 +40,7 @@ const getReadme = async (username) => {
         return aboutSection;
     } catch (error) {
         console.error('Error fetching repositories:', error);
-        throw error; // Rethrow the error to handle it outside this function if needed
+        throw error; 
     }
 };
 
@@ -48,7 +49,6 @@ const populateAboutSection = async () => {
         .then(readme => {
             const aboutLines = document.getElementById('aboutlines');
             if (aboutLines) {
-                // Replace Lorem Ipsum text with your desired content
                 aboutLines.innerHTML = readme;
             }
         });
@@ -71,7 +71,7 @@ const getRepositories = async (username) => {
         return data;
     } catch (error) {
         console.error('Error fetching repositories:', error);
-        throw error; // Rethrow the error to handle it outside this function if needed
+        throw error;
     }
 };
 
