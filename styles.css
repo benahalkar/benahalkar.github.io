@@ -228,7 +228,7 @@ a {
 
 #project_title {
     margin: 0;
-
+    padding-bottom: 5px;
     font-family: 'Inter_Bold', sans-serif; 
     font-size: 18px;
     color: #ffffff; 
@@ -239,6 +239,7 @@ a {
 
 #project_description {
     margin: 0;
+    font-size: 16px;
 }
 
 .activity_images {

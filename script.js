@@ -68,6 +68,14 @@ const getRepositories = async (username) => {
             throw new Error('Failed to fetch repositories');
         }
         const data = await response.json();
+
+        data.sort(function(a, b) {
+            var dateA = new Date(a.created_at);
+            var dateB = new Date(b.created_at);
+            
+            return dateB - dateA;
+        });
+
         return data;
     } catch (error) {
         console.error('Error fetching repositories:', error);
@@ -100,7 +108,7 @@ const populateProjectsSection = async () => {
             repoElement.innerHTML = `
             <a href="${repo.html_url}" class="single_project_list" target="_blank">
                 <h4 id="project_title">${repo.name}</h4>
-                <p id="project_description">${repo.description}</p>
+                <p class="project_description" id="project_description">${repo.description}</p>
             </a>
             `;
             projectsSection.appendChild(repoElement);
