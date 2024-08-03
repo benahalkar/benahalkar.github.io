@@ -69,8 +69,23 @@ p {
 
 a {
     text-decoration: none;
-    cursor: pointer !important;
+    /* cursor: pointer !important; */
+    cursor: none;
 }
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 200%;
+    pointer-events: none;
+}
+
+
+/* href {
+    cursor: none;
+} */
 
 #circle {
     width: 20px;
@@ -80,9 +95,11 @@ a {
     position: absolute;
     top: 0;
     left: 0;
-    pointer-events: none;
-    /* transition: all 0.01s ease; */
+    pointer-events: none;   
 }
+    
+    /* transition: all 0.01s ease; */
+
 
 .left_section, .right_section {
     width: 50%;
@@ -113,7 +130,7 @@ a {
 /* left section skeleton */
 
 .contact_icons {
-    height: 50px;
+    height: 25px;
     width: auto;
     fill: #ffffff;
 

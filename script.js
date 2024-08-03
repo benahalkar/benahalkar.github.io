@@ -1,21 +1,135 @@
+
+// github username
 const username = "benahalkar";
+
+// repositories to avoid while showing on the website
 const blacklisted_repos = ["info", username, `${username}.github.io`];
+
+// path on google drive where resume is saved (in view mode obviously)
 const resume_path = "https://drive.google.com/file/d/1uZ4fIGaE3fATaUl6_3ez_4CShxOOZhzQ/view?usp=drive_link";
 
+// number of projects to show on the website
 const project_counts = 5;
 
+// library filepath for the pdf filereader
 pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js';
 
-document.documentElement.style.cursor = 'none';
+// defining tab-content ids
+const ids = ["about", "projects", "experience", "activities", "acknowledgements"];
 
+// getting ids of all tablinks
+const tabLinks = document.querySelectorAll('.tab-link');
+
+const body = document.body;
+// const currentColor = window.getComputedStyle(body).backgroundColor;
+// console.log(currentColor)
+
+
+/*
+  MOUSE FEATURES 
+*/
+
+// remove the mouse cursor from dispay
+// document.documentElement.style.cursor = 'none';
+body.style.cursor = 'none';
+
+
+// change that to a white circle 
 document.addEventListener('mousemove', function(event) {
     const circle = document.getElementById('circle');
     const mouseX = event.clientX;
     const mouseY = event.clientY;
     
     circle.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+    
 });
 
+/*
+  TAB COLOR HIGHLIGHT
+*/
+
+//  adding code to keep checking which tab is the mouse is hovering on
+
+function turnLinkYellow(id){
+    tabLinks.forEach(function(link){
+        link.style.color = "#ffffff";
+    })
+
+    document.getElementById(id).style.color = "#ffff00"
+}
+
+const hoverableDivs = document.querySelectorAll('.tab-content');
+
+function handleMouseOver(event) {
+    const element = event.target.id;
+    // console.log(`Mouse is over ${element}`);
+    if(ids.indexOf(element) != -1){
+        turnLinkYellow(`tab-link-${element}`);
+    }
+
+}
+function handleMouseOut(event) {
+    const element = event.target;
+    // console.log(`Mouse left ${element.id}`);
+}
+
+hoverableDivs.forEach(div => {
+    div.addEventListener('mouseenter', handleMouseOver);
+    div.addEventListener('mouseleave', handleMouseOut);
+});
+
+
+// highlights the individual tab names when a user clicks on them
+tabLinks.forEach(function(tabLink) {
+    tabLink.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default link behavior
+        
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        
+        if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+
+            turnLinkYellow(this.id);
+
+            // this.style.color = "#ffff00";
+            // console.log(this)
+        }
+        else {
+            // do nothing
+        }
+    });
+});
+
+
+/*
+  CONTACT ICONS CHANGE
+*/ 
+
+const contactIcons = document.querySelectorAll('.contact_icons')
+
+function mouseOverIcon(){
+    // console.log('Mouse is over', this);
+    image = this.alt.toLowerCase();
+    this.src = `./icons/${image}.svg`
+}
+
+function mouseLeftIcon() {
+    // console.log('Mouse left', this);
+    image = this.alt.toLowerCase();
+    this.src = `./icons/${image}_fade.svg`
+}
+
+contactIcons.forEach(link => {
+    link.addEventListener('mouseover', mouseOverIcon);
+    link.addEventListener('mouseleave', mouseLeftIcon);
+});
+
+/*
+  ABOUT SECTION PARSER
+*/  
+
+// gets the first div part of the README content 
 function extractAboutSection(readmeContent) {
     const parts = readmeContent.split('<div id="about">');
 
@@ -28,6 +142,7 @@ function extractAboutSection(readmeContent) {
     }
 }
 
+// gets the README content from the username's github
 const getReadme = async (username) => {
     try {
         const response = await fetch(`https://raw.githubusercontent.com/${username}/${username}/main/README.md`);
@@ -44,6 +159,7 @@ const getReadme = async (username) => {
     }
 };
 
+// puts the README content onto the website
 const populateAboutSection = async () => {
     getReadme(username)
         .then(readme => {
@@ -55,12 +171,12 @@ const populateAboutSection = async () => {
 };
 
 
-// const getRepositories = async (username) => {
-//     const response = await fetch(`https://api.github.com/users/${username}/repos`);
-//     const data = await response.json();
-//     return data;
-// };
 
+/* 
+  PROECT SECTION
+*/
+
+// get all repositories from username's github and sorts them in descending order 
 const getRepositories = async (username) => {
     try {
         const response = await fetch(`https://api.github.com/users/${username}/repos`);
@@ -83,10 +199,18 @@ const getRepositories = async (username) => {
     }
 };
 
+// extracts the README content from each repository and populates it onto the website
 const populateProjectsSection = async () => {
     try {
         const projectsSection = document.querySelector('#projects');
         const repositories = await getRepositories(username);
+        
+        const pElementstart = document.createElement('p');
+        pElementstart.className = "aboutproject"; 
+        pElementstart.innerHTML = `
+            Few recent github projects. 
+        `;
+        projectsSection.appendChild(pElementstart);
 
         let count = project_counts;
         for (let i = 0; i < repositories.length; i++) {
@@ -119,19 +243,25 @@ const populateProjectsSection = async () => {
                 break;
             }
         }
-        
-        const pElement = document.createElement('p');
-        pElement.className = "aboutproject"; 
-        pElement.innerHTML = `
-            You can find all my other <a class="external_link" target="_blank" href="https://github.com/${username}?tab=repositories">projects</a> here.
+
+        const pElementend = document.createElement('p');
+        pElementend.className = "aboutproject"; 
+        pElementend.innerHTML = `
+            View other <a class="external_link" target="_blank" href="https://github.com/${username}?tab=repositories"> projects</a> here.
         `;
-        projectsSection.appendChild(pElement);
+        projectsSection.appendChild(pElementend);
         
     } catch (error) {
         console.error('Error fetching repositories:', error);
     }
 };
 
+
+/*
+  RESUME and EXPERIENCE SECTION
+*/
+
+// parse a pdf file
 function readPDFFile(filePath) {
     return pdfjsLib.getDocument(filePath)
         .promise.then(function(pdf) {
@@ -154,6 +284,7 @@ function readPDFFile(filePath) {
         });
 }
 
+// get the work experience section from the pdf resume
 async function parseWorkExperienceAsync(text) {
     return new Promise((resolve, reject) => {
         try {
@@ -190,9 +321,13 @@ async function parseWorkExperienceAsync(text) {
 }
 
   
-
+/*
+ ACTIONS on PAGE LOAD and RE-LOAD
+*/
 document.addEventListener('DOMContentLoaded', function() {
     
+    console.log('page loaded');
+
     populateProjectsSection();
 
     populateAboutSection();
@@ -212,28 +347,8 @@ document.addEventListener('DOMContentLoaded', function() {
     //         console.error(error);
     //     });
 
-    const tabLinks = document.querySelectorAll('.tab-link');
     
-    tabLinks.forEach(function(tabLink) {
-        tabLink.addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent default link behavior
-            
-            const targetId = this.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
-            
-            if (targetSection) {
-                targetSection.scrollIntoView({ behavior: 'smooth' });
-
-                tabLinks.forEach(function(link){
-                    link.style.color = "#ffffff";
-                })
-
-                this.style.color = "#ffff00";
-            }
-            else {
-                // do nothing
-            }
-        });
-    });
 
 });
+
+
