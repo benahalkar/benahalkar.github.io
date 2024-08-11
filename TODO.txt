@@ -1,3 +1,7 @@
+11th Aug 2024: Make resume globally shareable
+
+11th Aug 2024: Resolve view issue with X-logo
+
 Add gradient mouse cursor
 
 Add experience section
@@ -7,7 +11,3 @@ Add software and skills to each project and experience
 Enable dual-side scroll
 
 Highlight all links on mouse-hover
-
-Make resume globally shareable
-
-Resolve view issue with X-logo
