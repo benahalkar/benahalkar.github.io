@@ -9,3 +9,5 @@ Enable dual-side scroll
 Highlight all links on mouse-hover
 
 Make resume globally shareable
+
+Resolve view issue with X-logo
