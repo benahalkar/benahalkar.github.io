@@ -176,6 +176,30 @@ const populateAboutSection = async () => {
   PROECT SECTION
 */
 
+// Function to fetch languages
+const fetchRepoLanguages = async (apiUrl) => {
+    try {
+        const response = await fetch(apiUrl, {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/vnd.github.v3+json',
+                // If you have an access token, you can include it here
+                // 'Authorization': 'token YOUR_ACCESS_TOKEN'
+            }
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        return data;
+        // console.log('Languages used in the repository:', data);
+    } catch (error) {
+        console.error('Error fetching repository languages:', error);
+    }
+}
+
 // get all repositories from username's github and sorts them in descending order 
 const getRepositories = async (username) => {
     try {
@@ -184,6 +208,7 @@ const getRepositories = async (username) => {
             throw new Error('Failed to fetch repositories');
         }
         const data = await response.json();
+        // console.log(data);
 
         data.sort(function(a, b) {
             var dateA = new Date(a.created_at);
@@ -220,6 +245,10 @@ const populateProjectsSection = async () => {
                 continue; 
             }
 
+            let languages = await fetchRepoLanguages(repo.languages_url);
+            languages = Object.keys(languages);
+            let languageBubbles = languages.map(language => `<span class="language_bubble" id="language_bubble">${language}</span>`).join('');
+
             const repoElement = document.createElement('div');
             repoElement.className = "single_project"; 
 
@@ -233,6 +262,7 @@ const populateProjectsSection = async () => {
             <a href="${repo.html_url}" class="single_project_list" target="_blank">
                 <h4 id="project_title">${repo.name}</h4>
                 <p class="project_description" id="project_description">${repo.description}</p>
+                ${languageBubbles}
             </a>
             `;
             projectsSection.appendChild(repoElement);
@@ -247,7 +277,7 @@ const populateProjectsSection = async () => {
         const pElementend = document.createElement('p');
         pElementend.className = "aboutproject"; 
         pElementend.innerHTML = `
-            View other <a class="external_link" target="_blank" href="https://github.com/${username}?tab=repositories"> projects</a> here.
+            View other <a class="external_link" id="github_url" target="_blank" href="https://github.com/${username}?tab=repositories"> projects</a> here.
         `;
         projectsSection.appendChild(pElementend);
         

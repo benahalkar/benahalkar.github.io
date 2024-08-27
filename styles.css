@@ -238,6 +238,10 @@ canvas {
     margin-left: 5px;
 }
 
+.external_link:hover {
+    color: #ffff00 !important; 
+}
+
 .single_project:hover{
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
@@ -257,6 +261,18 @@ canvas {
 #project_description {
     margin: 0;
     font-size: 16px;
+}
+
+#language_bubble {
+    display: inline-block;
+    padding: 5px 10px;
+    font-family: 'Inter_Regular', sans-serif; 
+    font-size: 12px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    margin-top: 5px;
+    margin-right: 5px;
 }
 
 .activity_images {

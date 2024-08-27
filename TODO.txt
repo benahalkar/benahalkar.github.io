@@ -2,12 +2,14 @@
 
 11th Aug 2024: Resolve view issue with X-logo
 
+26th Aug 2024: Add software and skills to each project and experience
+
+26th Aug 2024: Highlight all links on mouse-hover
+
 Add gradient mouse cursor
 
 Add experience section
 
-Add software and skills to each project and experience
-
 Enable dual-side scroll
 
-Highlight all links on mouse-hover
+Make resume globally shareable
