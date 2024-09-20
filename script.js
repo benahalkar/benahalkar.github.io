@@ -245,18 +245,21 @@ const populateProjectsSection = async () => {
                 continue; 
             }
 
+            if (repo.description == null) {
+                // repo.description = repo.name;
+                continue;
+            }
+
             let languages = await fetchRepoLanguages(repo.languages_url);
             languages = Object.keys(languages);
             let languageBubbles = languages.map(language => `<span class="language_bubble" id="language_bubble">${language}</span>`).join('');
 
+            
+            repo.name = repo.name.replace(/-/g, ' ').replace(/_/g, ' ');
+            
+            
             const repoElement = document.createElement('div');
             repoElement.className = "single_project"; 
-
-            repo.name = repo.name.replace(/-/g, ' ').replace(/_/g, ' ');
-
-            if (repo.description == null) {
-                repo.description = repo.name;
-            }
 
             repoElement.innerHTML = `
             <a href="${repo.html_url}" class="single_project_list" target="_blank">

@@ -6,6 +6,8 @@
 
 26th Aug 2024: Highlight all links on mouse-hover
 
+20th Sep 2024: Filter still-in-progress github repositories  
+
 Add gradient mouse cursor
 
 Add experience section
