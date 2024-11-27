@@ -6,7 +6,7 @@ const username = "benahalkar";
 const blacklisted_repos = ["info", username, `${username}.github.io`];
 
 // path on google drive where resume is saved (in view mode obviously)
-const resume_path = "https://drive.google.com/file/d/1f6JSh3qtlrqa_1eahNxFj8zOeV-WFLdp/view?usp=sharing";
+const resume_path = "https://drive.google.com/file/d/1-Kmlt4qoC9-5EZf9MbZNaorTnl_BZLLH/view?usp=sharing";
 
 // number of projects to show on the website
 const project_counts = 5;
