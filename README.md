@@ -2,7 +2,9 @@
 
 My portfolio.
 
-## Overview
+Forked from [RyanFitzgerald](https://github.com/RyanFitzgerald/devportfolio?tab=readme-ov-file)
+
+<!-- ## Overview
 
 Welcome to my digital portfolio! I'm passionate about showcasing my journey through various projects, activities, and acknowledgments. As you browse through my portfolio, you'll discover a diverse range of endeavors that reflect my commitment to continuous learning and innovation. From technical projects to creative pursuits, each entry embodies my dedication to personal and professional growth. Join me in exploring this digital space, where inspiration meets creativity!
 
@@ -37,4 +39,4 @@ Include any additional resources, citations, or credits used in building the web
 
 This project repository has been licensed under the MIT license.
 
-
+ -->

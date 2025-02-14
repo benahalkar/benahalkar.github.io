@@ -208,15 +208,15 @@ const getRepositories = async (username) => {
             throw new Error('Failed to fetch repositories');
         }
         const data = await response.json();
-        // console.log(data);
-
+        console.log(data);
+        
         data.sort(function(a, b) {
             var dateA = new Date(a.created_at);
             var dateB = new Date(b.created_at);
             
             return dateB - dateA;
         });
-
+        
         return data;
     } catch (error) {
         console.error('Error fetching repositories:', error);

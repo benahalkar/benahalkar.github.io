@@ -1,95 +1,344 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>harshbenahalkar</title>
-    <link rel="icon" href="icons/tablogo.png" type="image/png">
-    <link rel="stylesheet" href="styles.css">
+	<link rel="shortcut icon" href="tablogo.ico" type="image/x-icon">
+	<link rel="icon" href="tablogo.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
 </head>
+
 <body>
-    <!-- <canvas id="canvas"></canvas>  -->
-    <div id="circle"></div>
-    <div class="left_section">
-        <div class="names">
-            <h1 class="namesline_name">Harsh Benahalkar</h1>
-            <h2 class="namesline_current">M.S. Electrical Engineering,<br>Columbia University</h2>
-            <p class="namesline_about">I like learning and building new things, to make them better.</p>
-        </div>
-
-        <div class="tabs">
-            <a href="#about" class="tab-link" id="tab-link-about">ABOUT</a>
-            <!-- <a href="#experience" class="tab-link">EXPERIENCE</a> -->
-            <a href="#projects" class="tab-link" id="tab-link-projects">PROJECTS</a>
-            <a href="#activities" class="tab-link" id="tab-link-activities">HOBBIES</a>
-            <a href="#acknowledgements" class="tab-link" id="tab-link-acknowledgements">CREDITS</a>
-        </div>
-
-        <div class="contact">
-            <a href="mailto:hb2776@columbia.edu" target="_blank">
-                <img class="contact_icons" src="./icons/mail_fade.svg" alt="Mail">
-            </a>
-
-            <a href="https://www.linkedin.com/in/harsh-benahalkar/" target="_blank">
-                <img class="contact_icons" src="./icons/linkedin_fade.svg" alt="LinkedIn">
-            </a>
-
-            <a href="https://github.com/benahalkar" target="_blank">
-                <img class="contact_icons" src="./icons/github_fade.svg" alt="Github">
-            </a>
-
-            <a href="https://twitter.com/HarshBenahalkar" target="_blank">
-                <img class="contact_icons" src="./icons/x_fade.svg" alt="X">
-            </a>
-
-            <a href="https://www.goodreads.com/harshbenahalkar" target="_blank">
-                <img class="contact_icons" src="./icons/goodreads_fade.svg" alt="Goodreads">
-            </a>
-        </div>
-
+    <div id="mobile-menu-open" class="shadow-large">
+        <i class="fa fa-bars" aria-hidden="true"></i>
     </div>
-    <div class="right_section" id="right-section">
-        <!-- Content for the right side goes here -->
-        <div id="about" class="tab-content">
-            <p class="aboutlines" id="aboutlines"></p>
-
-            <p class="aboutresume" id="aboutresume">You can find my resume <a class="external_link" href="https://drive.google.com/file/d/1-Kmlt4qoC9-5EZf9MbZNaorTnl_BZLLH/view?usp=sharing" target="_blank">here</a>.</p>
+    <!-- End #mobile-menu-toggle -->
+    <header class="sticky">
+        <div id="mobile-menu-close">
+            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
         </div>
+        <ul id="menu" class="shadow">
+            <li>
+                <a href="#about">About</a>
+            </li>
+            <li>
+                <a href="#experience">Experience</a>
+            </li>
+            <li>
+                <a href="#education">Education</a>
+            </li>
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </header>
+    <!-- End header -->
 
-        <!-- <div id="experience" class="tab-content">
+    <div id="lead">
+        <div id="lead-content">
+            <h1>Harsh Benahalkar</h1>
+            <h2>Data Science, Machine Learning, Gen AI</h2>
+            <a href="https://drive.google.com/file/d/1-Kmlt4qoC9-5EZf9MbZNaorTnl_BZLLH/view?usp=sharing" target="_blank" class="btn-rounded-white">Download Resume</a>
+        </div>
+        <!-- End #lead-content -->
 
-        </div> -->
+        <div id="lead-overlay"></div>
 
-        <div id="projects" class="tab-content"></div>
+        <div id="lead-down">
+            <span>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </span>
+        </div>
+        <!-- End #lead-down -->
+    </div>
+    <!-- End #lead -->
 
-        <div id="activities" class="tab-content">
-            <div class="activity_category">
-                <p class="acivity_text">Few of my favourite music artists.</p>
-                <img class="activity_images" src="./images/music/pink_floyd.jpg" alt="Pink FLoyd">
-                <img class="activity_images" src="./images/music/the_beatles.jpg" alt="The Beatles">
-                <img class="activity_images" src="./images/music/coldplay.jpeg" alt="Coldplay">
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 class="heading">About Me</h2>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                        Welcome to my digital corner, showcasing my journey, learnings, and accomplishments. This portfolio briefly describes me and highlights my projects - a blend of software, hardware, and hybrid solutions. You'll find various ways to connect with me here.
+                        </br></br>
+                        I'm currently pursuing a Master's in Electrical Engineering at Columbia University, focusing on Distributed Systems, Natural Language Processing, and Machine Learning. My passion lies in cloud technologies and the Industry 4.0 revolution. I completed my Bachelor's in Electronics and Telecommunications Engineering in 2021, where I contributed significantly to my electric vehicle FSAE team.
+                        </br></br>
+
+                        In the two years between my degrees, I worked at ACDM, a startup developing end-to-end solutions for factories, contributing to the Industry 3.0 revolution in India. This experience, combined with my academic projects, has helped me build a diverse set of software and work skills, shaping my unique profile and work ethic.
+                        </br></br>
+                        Outside of work, I enjoy cooking, painting, practicing calligraphy, and exploring the city. Having lived in Mumbai and New York, I'm never short of options for new experiences.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End #about -->
+
+    <div id="experience" class="background-alt">
+        <h2 class="heading">Experience</h2>
+        <div id="experience-timeline">
+            <div data-date="June 2024 – August 2024">
+                <h3>Oden Technologies</h3>
+                <h4>Engineering Intern (Artificial Intelligence)</h4>
+                <p>
+                    Developed an LLM system for translating natural language to a custom Oden Query Language. Implemented sentence-fusion using OpenAI API for dataset synthesis and LoRA PEFT on Google's Codey LLM. Created a RAG pipeline with Langchain and document transcription. Deployed a Slack bot interface on Google Cloud using Cloud Run and Cloud Bucket
+                </p>
             </div>
 
-            <div class="activity_category">
-                <p class="acivity_text">Few of my recently read books.</p>
-                <img class="activity_images" src="./images/books/how_the_world_works.jpeg" alt="HTWW">
-                <img class="activity_images" src="./images/books/diary_of_naval_ravikant.jpg" alt="DONR">
-                <img class="activity_images" src="./images/books/unshakable.jpg" alt="U">
-                <img class="activity_images" src="./images/books/chanakya.jpg" alt="CN">
+            <div data-date="December 2022 – April 2023">
+                <h3>Advance Control Data Machines</h3>
+                <h4>Senior Embedded Software Developer</h4>
+                <p>
+                    I took on leadership responsibilities, becoming accountable for creating industrial-grade applications for loggers, controllers, and user interfaces across diverse sectors. I expanded my expertise to include cloud technologies like Azure and played a key role in driving operational and technological changes to align with Industry 3.0 principles. I also assumed client-facing duties, delivering product demonstrations and mentoring junior colleagues and interns to enhance team productivity and foster innovation.
+                </p>
             </div>
 
-        </div>
+            <div data-date="June 2021 – December 2022">
+                <h3>Advance Control Data Machines</h3>
+                <h4>Embedded Software Developer</h4>
+                <p>
+                    I focused on firmware development using Python and C, and contributed to web development with NodeJS and React. I gained experience in hardware aspects like PCB design and test bench setup, and worked with databases such as SQL and PostgreSQL. I also familiarized myself with various communication protocols including MODBUS, CAN, MQTT, FTP, OPC-UA, and I2C.
+                </p>
+            </div>
 
-        <div id="acknowledgements" class="tab-content">
-            <p class="acknowledgements_lines" id="acknowledgements_lines">
-                Designed by yours truly.<br>
-                Inspired by <a class="external_link" href="https://brittanychiang.com/" target="_blank">Brittany Chang</a>.<br>
+            <div data-date="April 2021 – June 2021">
+                <h3>Taxir Aviation</h3>
+                <h4>Electronics Intern</h4>
+                <p>
+                    Designed and validated the prototype Printed Circuit Board (PCB). Responsible for designing the Computer Aided Design (CAD) for the enclosure housing the parachute and electronics. Led the initiative to procure parachute fabric at wholesale price.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- End #experience -->
+
+    <div id="education">
+        <h2 class="heading">Education</h2>
+        <div class="education-block">
+            <h3>Columbia University</h3>
+            <span class="education-date">Aug 2023 - Dec 2024</span>
+            <h4>Master of Science (Honors) in Electrical Engineering</h4>
+            <p>
+                Specializing in Data-driven Analysis and Computation with a focus on Deep Learning and Distributed Systems. 
             </p>
+            </br>
+            <p>
+                GPA: 4.17/4.0
+            </p>
+            </br>
+            <ul>
+                <li>
+                    Received Honors for maintaining GPA in top 10% of class
+                </li>
+                <li>
+                    Conducted research on multi-modal LLMs under Dr. Micah Goldblum
+                </li>
+                <li>
+                    Teaching Assistant for EECS6694 - Generative AI and Modern Deep Learning
+                </li>
+                <li>
+                    Teaching Assistant for QMSS5074 - Projects in Advanced Machine Learning
+                </li>
+            </ul>
+        </div>
+        <!-- End .education-block -->
+
+        <div class="education-block">
+            <h3>University of Mumbai</h3>
+            <span class="education-date">Aug 2017 - May 2021</span>
+            <h4>Bachelor of Engineering in Electronics and Telecommunication Engineering</h4>
+            <p>
+                GPA: 9.13/10.0
+            </p>
+            </br>
+            <ul>
+                <li>
+                    Student department lead of Low Voltage for FSAE team DJS Racing
+                </li>
+                <li>
+                    Student member of DJSCE IETE-SF
+                </li>
+            </ul>
+        </div>
+        <!-- End .education-block -->
+    </div>
+    <!-- End #education -->
+
+    <div id="projects" class="background-alt">
+        <h2 class="heading">Projects</h2>
+        <div class="container">
+            <div class="row">
+                
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/hpml.png" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>IBM Llama Foundational model</h3>
+                        <p>
+                            This project aims to implement a complete forward pass for the LLAMA model using NestedTensors in PyTorch. NestedTensors offer a more efficient approach to managing variable-length data, enhancing memory usage - a critical factor for large-scale inference and fine-tuning. Building on the LLaMA micro implementation from the IBM Foundation Model Stack (FMS), we made it fully compatible with NestedTensors. The experiments were conducted on Nvidia A100 GPU to evaluate the impact of these optimizations.
+                        </p>
+                        <a href="https://github.com/kushaangowda/nestedtensors-for-transformers">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/dloe.png" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>3D-pose estimation and correction</h3>
+                        <p>
+                            This project focuses on real-time 3D pose estimation and correction on edge devices, particularly targeting yoga positions. The goal is to develop an algorithm capable of accurately estimating and correcting yoga poses in real-time, enabling users to receive immediate feedback on their posture during yoga practice. 
+                        </p>
+                        <a href="https://github.com/benahalkar/3D-pose-estimation-and-correction">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/bda.png" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Flight Data Analytics</h3>
+                        <p>
+                            This project presents a real-time weather visualization and risk assessment tool for flights, leveraging historical weather and flight data to ensure safer operations by highlighting potential weather-related risks along flight routes. 
+                        </p>
+                        <a href="https://github.com/benahalkar/Flight-data-analytics">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/lssp.png" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Multilingual Streaming Translator</h3>
+                        <p>
+                            A apache-beam based streaming pipeline that leverages Meta's NLLB LLM (via hugging-face) to perform translation. Translation can be in single-single or single-multi mode in realtime.
+                        </p>
+                        <a href="https://github.com/benahalkar/Multilingual-Streaming-Translators">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+            </div>
         </div>
     </div>
+    <!-- End #projects -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
-    <script src="pdfjsLib.js"></script>
-    <script src="script.js"></script>
+    <div id="skills">
+        <h2 class="heading">Skills</h2>
+        <ul>
+            <li>Python</li>
+            <li>C</li>
+            <li>R</li>
+            <li>SQL</li>
+            <li>Scikit-learn</li>
+            <li>TensorFlow</li>
+            <li>PyTorch</li>
+            <li>Keras</li>
+            <li>Apache</li>
+            <li>NLTK</li>
+            <li>spaCy</li>
+            <li>OpenCV</li>
+            <li>NumPy</li>
+            <li>Pandas</li>
+            <li>SciPy</li>
+            <li>Matplotlib</li>
+            <li>Jupyter</li>
+            <li>Langchain</li>
+            <li>HuggingFace</li>
+            <li>JavaScript</li>
+            <li>Node.js</li>
+            <li>Java</li>
+            <li>C#</li>
+            <li>C++</li>
+        </ul>
+    </div>
+    <!-- End #skills -->
+
+    <div id="contact">
+        <h2>Get in Touch</h2>
+        <div id="contact-form">
+            <form method="POST" action="https://formspree.io/email@email.com">
+                <input type="hidden" name="_subject" value="Contact request from personal website" />
+                <input type="email" name="_replyto" placeholder="Your email" required>
+                <textarea name="message" placeholder="Your message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <!-- End #contact-form -->
+    </div>
+    <!-- End #contact -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 copyright">
+                    <p>
+                        Copyright &copy; <span id="current-year">2025</span> HARSH BENAHALKAR
+                    </p>
+                </div>
+                <div class="col-sm-2 top">
+                    <span id="to-top">
+                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="col-sm-5 social">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/benahalkar/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com/in/harsh-benahalkar/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/HarshBenahalkar" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://scholar.google.com/citations?user=GY8nAQQAAAAJ&hl=en" target="_blank"><i class="fa fa-university" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://gooreads.com/harshbenahalkar" target="_blank"><i class="fa fa-book" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/scripts.min.js"></script>
 </body>
+
 </html>

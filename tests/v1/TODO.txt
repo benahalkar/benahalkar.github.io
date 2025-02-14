@@ -1,0 +1,30 @@
+
+HTML
+X    Make tab pane
+X        make tab pane mobile friendly
+X    Make sections (pane, about, project, etc) div
+X    Make two columns for name, about & picture div
+
+CSS
+    limit entire page to a small part in the middle, don't make it take entire page width
+    Common Font for all text
+    spacing for body (one for mobile, one for large screen desktop, one for mid size desktop)
+    shifting image to top
+
+JS
+    add parser for links in about section
+    add parser for bold letters in about section
+X    add button for switching between light and dark section
+    extracting libraries and technologies
+    image show-er for projects
+    Work experience parser from pdf file
+    text color
+    colors for buttons (dark and light)
+    icons for button (dark and light) 
+    highlight color for text links
+    highlight color for bold text
+    highlight color for selected tabs
+    border color for tab and menu and image 
+    Name color (wanted this to be a decorative light)
+    alternating background colors for sections (pane, about, project, etc)
+    

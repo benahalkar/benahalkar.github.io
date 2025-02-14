@@ -1,0 +1,292 @@
+
+/* 
+  ---------------------------------------------------
+   * Custom External fonts 
+  ---------------------------------------------------
+*/
+
+@font-face {
+    font-family: 'Inter_Thin';
+    src: url('../fonts/extras/ttf/Inter-Thin.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter_Regular';
+    src: url('../fonts/extras/ttf/Inter-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter_Bold';
+    src: url('../fonts/extras/ttf/Inter-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter_ExtraBold';
+    src: url('../fonts/extras/ttf/Inter-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter_SemiBold';
+    src: url('../fonts/extras/ttf/Inter-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter_Italic';
+    src: url('../fonts/extras/ttf/Inter-Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter_Light';
+    src: url('../fonts/extras/ttf/Inter-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter_Medium';
+    src: url('../fonts/extras/ttf/Inter-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter_ThinItalic';
+    src: url('../fonts/extras/ttf/Inter-ThinItalic.ttf') format('truetype');
+}
+
+
+
+/* 
+  ---------------------------------------------------
+   * HTML attributes Common CSS  
+  ---------------------------------------------------
+*/
+
+html {
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; Prevent scrolling while loading */
+}
+
+body {
+    margin: 0;
+    padding: 0px;
+}
+
+p {
+    font-family: 'Inter_Light', sans-serif; 
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: normal;
+    font-style: normal;
+    /* letter-spacing: 1px; */
+    line-height: 1.5;
+    text-align: justify;
+    width: 100%;
+    margin: 0; /* Remove default margin from p */
+}
+
+footer {
+    text-align: center; /* Center text */
+    font-family: 'Inter_Medium', sans-serif; 
+}
+
+
+
+
+/* 
+  ---------------------------------------------------
+   * Loading screen CSS  
+  ---------------------------------------------------
+*/
+
+#loading-screen {
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #282c34;
+    color: white;
+    font-size: 24px;
+    z-index: 1000;
+    transition: transform 0.8s ease-in-out;
+    display: flex;
+    flex-direction: column;  /* Stack items vertically */
+    align-items: center;     /* Center align the items */
+    justify-content: center; /* Optionally center vertically */
+}
+
+#loading-image {
+    width: auto;
+    height: 200px; /* Adjust this as needed */
+    max-width: 200px; /* Set the max-width for the image */
+    border-radius: 50%; /* This makes the image circular */
+    object-fit: cover; /* Ensures the image covers the circle without distortion */
+}
+
+#loading-screen-text {
+    margin-top: 20px; /* Adds space between image and the text */
+    margin-bottom: 20px; /* Adds space between the text and loading bar */
+    font-family: 'Inter_Light', sans-serif;
+    font-size: 18px;
+}
+
+#progress-bar-container {
+    width: 100vw; /* Full width of the viewport */
+    height: auto;  /* Adjust as needed */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#progress-wrapper {
+    width: 300px;
+    height: 10px;
+    background-color: #CCCCCC; /* Change as needed */
+    border-radius: 5px;
+    margin: 0;
+    padding: 0;
+}
+
+#progress-bar {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 0%;
+    border-radius: 5px;
+    background-color: blue;
+}
+
+
+
+/* 
+  ---------------------------------------------------
+   * Main content CSS  
+  ---------------------------------------------------
+*/ 
+
+#content {
+    display: none; /* Hide content initially */
+    text-align: center;
+    padding: 20px;
+}
+
+#about-section {
+    display: flex;
+    flex-direction: column; /* Stack the divs vertically by default */
+    /* align-items: center; */
+    align-items: top;
+}
+
+#large-screen-tabs {
+    display: none;
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+#small-screen-panel {
+    display: block;
+    padding: 20px;
+    text-align: center;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ff0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+
+/* For larger screens (e.g., desktop) */
+@media (min-width: 768px) {
+    #about-section {
+        flex-direction: row; /* Display divs side by side */
+        justify-content: space-between; /* Optional: To spread the divs apart */
+    }
+    
+    #about-text, #about-picture {
+        flex: 1; /* Allow both divs to take up equal space */
+        padding: 20px; /* Optional: Add some padding for spacing */
+    }
+
+    #large-screen-tabs {
+        display: block;
+    }
+    
+    #small-screen-panel {
+        display: none;
+    }
+
+    #side-panel-button{
+        display: none;
+    }
+
+}
+
+
+/* content div */
+#content {
+    padding: 0;
+    margin: 0;
+}
+
+/* intro fullname */
+#intro-fullname {
+    font-family: 'Inter_SemiBold', sans-serif;
+    font-size: 40px; 
+}
+
+/* tagline */
+#intro-tagline {
+    font-family: 'Inter_Italic', sans-serif; 
+    font-size: 18px;
+}
+
+
+/* profile picture */
+#about-picture img {
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the circular area without stretching */
+}
+
+/* contact buttons */
+.contact_icons {
+    margin: 0;
+    padding: 0;
+    /* padding-top: 20px; */
+    display: flex;
+    justify-content: center; /* Centers icons horizontally */
+    align-items: center;
+    gap: 10px; /* Adjust spacing between icons */
+}
+
+.circular-button {
+    display: flex;
+    width: 50px; /* Adjust size as needed */
+    height: 50px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.05); /* Light background */
+    overflow: hidden;
+}
+
+.circular-button img {
+    max-width: 70%; /* Ensures the icon fits well */
+    max-height: 70%;
+    object-fit: contain; /* Maintains aspect ratio */
+}
+
+/* projects */
+#project-section {
+    padding: 20px;
+}
+
+/* experience */
+#workex-section {
+    padding: 20px;
+}
