@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>harshbenahalkar</title>
+    <title>harshBenahalkar</title>
 	<link rel="shortcut icon" href="tablogo.ico" type="image/x-icon">
 	<link rel="icon" href="tablogo.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
@@ -81,7 +81,7 @@
                         <br><br>
                         Outside of work, I enjoy cooking, painting, practicing calligraphy, and exploring the city. Having lived in Mumbai and New York, I'm never short of options for new experiences.
                         <br><br>
-                        (Pictured above is the towering Kanchenjunga, the third highest and the most beautiful mountain in the world)
+                        (Pictured above is the towering <a target="_blank" href="https://en.wikipedia.org/wiki/Kangchenjunga">Kanchenjunga</a>, the third highest and the most beautiful mountain in the world)
                     </p>
                 </div>
             </div>
@@ -96,7 +96,11 @@
                 <h3>Oden Technologies</h3>
                 <h4>Engineering Intern (Artificial Intelligence)</h4>
                 <p>
-                    Developed an LLM system for translating natural language to a custom Oden Query Language. Implemented sentence-fusion using OpenAI API for dataset synthesis and LoRA PEFT on Google's Codey LLM. Created a RAG pipeline with Langchain and document transcription. Deployed a Slack bot interface on Google Cloud using Cloud Run and Cloud Bucket
+                    Developed an LLM system for natural language to custom Oden Query Language translation. 
+                    <br><br>
+                    Conducted EDA and Data cleaning on historical queries. Leveraged OpenAI API for dataset synthesis and augmentation using sentence-fusion. Fine-tuned quantized StarCoder, CodeLlama, and Gemini SOTA query-generating models. Transcribed documents and knowledge base for vector database RAG with prompt engineering. Integrated Cloud-deployed application with Slack.
+                    <br><br>
+                    Technologies used: HuggingFace, PyTorch, Docker, Google Cloud.
                 </p>
             </div>
 
@@ -104,7 +108,9 @@
                 <h3>Advance Control Data Machines</h3>
                 <h4>Senior Embedded Software Developer</h4>
                 <p>
-                    I took on leadership responsibilities, becoming accountable for creating industrial-grade applications for loggers, controllers, and user interfaces across diverse sectors. I expanded my expertise to include cloud technologies like Azure and played a key role in driving operational and technological changes to align with Industry 3.0 principles. I also assumed client-facing duties, delivering product demonstrations and mentoring junior colleagues and interns to enhance team productivity and foster innovation.
+                    Took on additional leadership responsibilities. 
+                    <br><br>
+                    Consolidated documentation for production and design on Linux product vertical. Led initiatives to set guidelines to make hardware and applications robust. Spearheaded projects and guided trainees to reduce application production time and make application update shipping more reliable. Delivered product demonstrations to senior client executives and usage instructions to the industrial workforce. Streamlined organizational workflow stages like material procurement, product assembly, client delivery, and installation.
                 </p>
             </div>
 
@@ -112,7 +118,11 @@
                 <h3>Advance Control Data Machines</h3>
                 <h4>Embedded Software Developer</h4>
                 <p>
-                    I focused on firmware development using Python and C, and contributed to web development with NodeJS and React. I gained experience in hardware aspects like PCB design and test bench setup, and worked with databases such as SQL and PostgreSQL. I also familiarized myself with various communication protocols including MODBUS, CAN, MQTT, FTP, OPC-UA, and I2C.
+                    Responsible for research and application development, deployment, and maintenance on the Linux product vertical.
+                    <br><br>
+                    Domains of application included Computer Vision, Data Logging, Equipment Controller, and Network Protocol Gateway.
+                    <br><br>
+                    Wrote and tested industrial-grade automation applications in Python and C. Created User Interface in NodeJS and React. Designed, tested, validated, and debugged PCB hardware using test-bench setup. Tech stack leveraged for applications included databases (MySQL and PostgreSQL), protocols (MODBUS, CAN, MQTT, FTP, OPC-UA, and I2C), and web (NodeJS and React). Regularly coordinated with clients and site engineers to resolve tickets.
                 </p>
             </div>
 
@@ -120,7 +130,7 @@
                 <h3>Taxir Aviation</h3>
                 <h4>Electronics Intern</h4>
                 <p>
-                    Designed and validated the prototype Printed Circuit Board (PCB). Responsible for designing the Computer Aided Design (CAD) for the enclosure housing the parachute and electronics. Led the initiative to procure parachute fabric at wholesale price.
+                    Designed and validated the prototype Printed Circuit Board (PCB). Created the Computer Aided Design (CAD) for the electronics and parachute housing. Led the initiative to procure parachute fabric at wholesale price.
                 </p>
             </div>
         </div>
@@ -173,6 +183,9 @@
                 <li>
                     Student member of <a target="_blank" href="https://djsceietesf.wordpress.com/about/">DJSCE IETE-SF</a>
                 </li>
+                <li>
+                    Student volunteer at <a target="_blank" href="https://nss.gov.in/">DJS-NSS</a> NGO.
+                </li>
             </ul>
         </div>
         <!-- End .education-block -->
@@ -190,9 +203,13 @@
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
-                        <h3>IBM Llama Foundational model</h3>
+                        <h3>IBM NestedLLAMA</h3>
                         <p>
-                            This project aims to implement a complete forward pass for the LLAMA model using NestedTensors in PyTorch. NestedTensors offer a more efficient approach to managing variable-length data, enhancing memory usage - a critical factor for large-scale inference and fine-tuning. Building on the LLaMA micro implementation from the IBM Foundation Model Stack (FMS), we made it fully compatible with NestedTensors. The experiments were conducted on Nvidia A100 GPU to evaluate the impact of these optimizations.
+                            The goal was to modify <a target="_blank" href="https://www.ibm.com/products/watsonx-ai/foundation-models">IBM's FMS Llama model</a> to be compatible with <a target="_blank" href="https://pytorch.org/tutorials/prototype/nestedtensor.html">Nested Tensors</a> on forward inference to make them more memory efficient with variable length data on fine-tuning - a critical factor for deploying and training models on distributed and edge devices. 
+                            <br><br>
+                            Performance was time and memory profiled. Additional tasks were to find bottlenecks in PyTorch's native implementation on NestedTensors. After completing the project we raised a <a target="_blank" href="https://github.com/foundation-model-stack/foundation-model-stack/pull/370">PR</a> on the sourcecode.
+                            <br><br>
+                            Technologies used: HuggingFace, IBM-FMS, PyTorch, CUDA, NVIDIA profiler.
                         </p>
                         <a href="https://github.com/kushaangowda/nestedtensors-for-transformers">View Project</a>
                     </div>
@@ -206,9 +223,13 @@
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
-                        <h3>3D-pose estimation and correction</h3>
+                        <h3>PoseWise: Yoga Mentor</h3>
                         <p>
-                            This project focuses on real-time 3D pose estimation and correction on edge devices, particularly targeting yoga positions. The goal is to develop an algorithm capable of accurately estimating and correcting yoga poses in real-time, enabling users to receive immediate feedback on their posture during yoga practice. 
+                            This project focuses on real-time 3D pose estimation and correction on yoga positions. The goal is to develop a vectorized algorithm capable of accurately estimating and correcting yoga poses in real time, enabling users to receive immediate feedback on their posture during yoga practice. 
+                            <br><br>
+                            The aim was to deploy a compute and time-intensive multi-thread UI application on a limited computing and limited power mobile edge device.
+                            <br><br>
+                            Technologies used: PyTorch, Jetson NANO, CUDA, OpenCV, Tkinter, Docker.
                         </p>
                         <a href="https://github.com/benahalkar/3D-pose-estimation-and-correction">View Project</a>
                     </div>
@@ -222,9 +243,11 @@
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
-                        <h3>Flight Data Analytics</h3>
+                        <h3>JetPredict: Flight Data Analytics</h3>
                         <p>
-                            This project presents a real-time weather visualization and risk assessment tool for flights, leveraging historical weather and flight data to ensure safer operations by highlighting potential weather-related risks along flight routes. 
+                            This project presents a real-time weather visualization and risk assessment tool for flights, leveraging and processing historical weather and bulk flight data to ensure safer operations by highlighting potential weather-related risks along flight routes. 
+                            <br><br>
+                            Technologies used: PySpark, Google Cloud, Airflow, Plotly, REST APIs.
                         </p>
                         <a href="https://github.com/benahalkar/Flight-data-analytics">View Project</a>
                     </div>
@@ -238,9 +261,13 @@
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
-                        <h3>Multilingual Streaming Translator</h3>
+                        <h3>LinguaStream: Multilingual Streaming Translator</h3>
                         <p>
-                            A apache-beam based streaming pipeline that leverages Meta's NLLB LLM (via hugging-face) to perform translation. Translation can be in single-single or single-multi mode in realtime.
+                            A apache-beam based streaming pipeline that leverages Meta's NLLB LLM to perform one-to-many language translation.
+                            <br><br>
+                            Windowing and Chunking strategies were created to maximize performance measured using Eucledian, and BLEU score metrics.
+                            <br><br>
+                            Technologies used: Apache Beam, HuggingFace, Kafka, PubSub, Google Cloud.
                         </p>
                         <a href="https://github.com/benahalkar/Multilingual-Streaming-Translators">View Project</a>
                     </div>
@@ -279,7 +306,7 @@
             <li>Docker</li>
             <li>Kubernetes</li>
             <li>Spark</li>
-            <li>Apache</li>
+            <li>Airflow</li>
             <li>Google Cloud Platform</li>
             <li>Amazon Web Services</li>
             <li>JavaScript</li>
