@@ -7,6 +7,7 @@ tags: comments
 categories: sample-posts external-services
 disqus_comments: true
 related_posts: false
+published: true # kept published: required by test/integration_comments.sh
 ---
 
 This post shows how to add DISQUS comments.

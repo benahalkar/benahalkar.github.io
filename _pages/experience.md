@@ -52,6 +52,7 @@ nav_order: 2
       <li>Designed, tested, and debugged PCB hardware on a test-bench setup.</li>
       <li>Worked across MySQL/PostgreSQL, MODBUS/CAN/MQTT/FTP/OPC-UA/I2C, coordinating directly with clients and site engineers.</li>
     </ul>
+
   </div>
 </div>
 
