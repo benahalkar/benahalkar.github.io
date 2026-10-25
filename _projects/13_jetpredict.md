@@ -1,13 +1,13 @@
 ---
 layout: page
-title: "JetPredict: Flight Data Analytics"
-short_title: JetPredict
+title: JetPredict
 description: Real-time weather visualization and risk assessment tool for flight routes.
 img: assets/img/projects/jetpredict.png
 importance: 4
 category: work
-github: https://github.com/benahalkar/Flight-data-analytics
 ---
+
+### JetPredict: Flight Data Analytics
 
 **Repository:** [github.com/benahalkar/Flight-data-analytics](https://github.com/benahalkar/Flight-data-analytics)
 

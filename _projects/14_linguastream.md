@@ -1,13 +1,13 @@
 ---
 layout: page
-title: "LinguaStream: Multilingual Streaming Translator"
-short_title: LinguaStream
+title: LinguaStream
 description: An Apache Beam streaming pipeline using Meta's NLLB LLM for one-to-many language translation.
 img: assets/img/projects/linguastream.jpg
 importance: 5
 category: work
-github: https://github.com/benahalkar/Multilingual-Streaming-Translator
 ---
+
+### LinguaStream: Multilingual Streaming Translator
 
 **Repository:** [github.com/benahalkar/Multilingual-Streaming-Translator](https://github.com/benahalkar/Multilingual-Streaming-Translator)
 

@@ -5,7 +5,6 @@ description: Modifying IBM's FMS Llama model to work with PyTorch Nested Tensors
 img: assets/img/projects/nestedllama.png
 importance: 1
 category: work
-github: https://github.com/kushaangowda/nestedtensors-for-transformers
 ---
 
 **Repository:** [github.com/kushaangowda/nestedtensors-for-transformers](https://github.com/kushaangowda/nestedtensors-for-transformers)

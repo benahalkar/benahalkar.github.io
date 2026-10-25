@@ -1,13 +1,13 @@
 ---
 layout: page
-title: "PoseWise: Yoga Mentor"
-short_title: PoseWise
+title: PoseWise
 description: Real-time 3D pose estimation and correction for yoga positions on an edge device.
 img: assets/img/projects/posewise.png
 importance: 2
 category: work
-github: https://github.com/benahalkar/3D-pose-estimation-and-correction
 ---
+
+### PoseWise: Yoga Mentor
 
 **Repository:** [github.com/benahalkar/3D-pose-estimation-and-correction](https://github.com/benahalkar/3D-pose-estimation-and-correction)
 

@@ -1,13 +1,13 @@
 ---
 layout: page
-title: "OfferCompass: Recommendation System for Offers"
-short_title: OfferCompass
+title: OfferCompass
 description: Recommending customized credit card offers to loyal customers from historical transactions.
 img: assets/img/projects/offercompass.jpg
 importance: 3
 category: work
-github: https://github.com/benahalkar/Merchant-recommendation-system
 ---
+
+### OfferCompass: Recommendation System for Offers
 
 **Repository:** [github.com/benahalkar/Merchant-recommendation-system](https://github.com/benahalkar/Merchant-recommendation-system)
 

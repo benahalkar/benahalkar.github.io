@@ -5,7 +5,6 @@ description: Fine-tuning Llama-7B with LoRA and quantization on a free-tier Goog
 img: assets/img/projects/llm-finetuning.jpg
 importance: 6
 category: work
-github: https://github.com/benahalkar/loading_and_finetuning_LLMs
 ---
 
 **Repository:** [github.com/benahalkar/loading_and_finetuning_LLMs](https://github.com/benahalkar/loading_and_finetuning_LLMs)
