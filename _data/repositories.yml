@@ -1,0 +1,12 @@
+github_users:
+  - benahalkar
+
+repo_description_lines_max: 2
+
+github_repos:
+  - benahalkar/benahalkar.github.io
+  - benahalkar/3D-pose-estimation-and-correction
+  - benahalkar/Merchant-recommendation-system
+  - benahalkar/Flight-data-analytics
+  - benahalkar/Multilingual-Streaming-Translator
+  - benahalkar/loading_and_finetuning_LLMs
